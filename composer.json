@@ -1,0 +1,18 @@
+{
+    "name": "open2code/pdf",
+    "description": "PDF Generator with Jasper",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Open2code\\Pdf\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Erick Navarrete",
+            "email": "ericknavarrete55@gmail.com"
+        }
+    ],
+    "require": {}
+}
