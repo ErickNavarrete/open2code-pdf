@@ -1,1 +1,1 @@
-{"version":1,"defects":{"Warning":6,"Test::itCanTestSomething":5},"times":{"Warning":0.005,"Test::itCanTestSomething":1.168}}
+{"version":1,"defects":{"Warning":6,"Test::itCanTestSomething":5,"Test\\jasperTests\\Test::itCanTestSomething":5},"times":{"Warning":0.005,"Test::itCanTestSomething":8.549,"Test\\jasperTests\\Test::itCanTestSomething":11.823}}

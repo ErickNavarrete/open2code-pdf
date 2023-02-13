@@ -1,6 +1,8 @@
 <?php
 
-use Open2code\Pdf\module\Report;
+namespace Test\jasperTests;
+
+use Open2code\Pdf\jasper\Report;
 use PHPUnit\Framework\TestCase;
 
 class Test extends TestCase
@@ -13,9 +15,9 @@ class Test extends TestCase
     {
         $report = new Report(
             '',
-            getcwd().'/tests/JasperFiles/Example.jasper',
             '',
-            getcwd().'/tests/JasperFiles/Example.pdf'
+            __DIR__.'/files/Example.jasper',
+            __DIR__.'/files/Example.pdf'
         );
         $report->generateReport();
         $this->assertTrue(true);
