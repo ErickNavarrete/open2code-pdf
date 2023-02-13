@@ -14,7 +14,9 @@ class Test extends TestCase
     public function itCanTestSomething()
     {
         $report = new Report(
-            '',
+            [
+                'Test' => 'test'
+            ],
             '',
             __DIR__.'/files/Example.jasper',
             __DIR__.'/files/Example.pdf'
