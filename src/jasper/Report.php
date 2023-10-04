@@ -9,13 +9,15 @@ class Report
     public $parameters;
     public $output;
     public $jasperPath;
+    public $documentType;
 
-    public function __construct($data, $parameters, $jasperPath, $output)
+    public function __construct($data, $parameters, $jasperPath, $documentType,$output)
     {
         $this->data = $data;
         $this->parameters = $parameters;
         $this->jasperPath = $jasperPath;
         $this->output = $output;
+        $this->documentType = $documentType;
     }
 
     /**
@@ -28,7 +30,7 @@ class Report
         $this->parameters = $this->toString($this->parameters);
 
         $arguments = "$this->jasperPath \"".addslashes($this->data)
-            ."\" --output=$this->output --parameters=\"$this->parameters\" --format=pdf";
+            ."\" --output=$this->output --parameters=\"$this->parameters\" --format=" . $this->documentType;
 
         $command = "java -Dfile.encoding=UTF-8 -jar $this->jarPath $arguments";
         $exec = exec($command, $execO, $execR);

@@ -19,9 +19,11 @@ class Test extends TestCase
             ],
             '',
             __DIR__.'/files/Example.jasper',
-            __DIR__.'/files/Example.pdf'
+            'xls',
+            __DIR__.'/files/Example.xls'
         );
-        $report->generateReport();
+        $result = $report->generateReport();
+        print_r($result['message']);
         $this->assertTrue(true);
     }
 }
