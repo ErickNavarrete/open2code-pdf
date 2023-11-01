@@ -11,7 +11,7 @@ class Report
     public $jasperPath;
     public $documentType;
 
-    public function __construct($data, $parameters, $jasperPath, $documentType,$output)
+    public function __construct($data, $parameters, $jasperPath, $documentType = 'PDF', $output)
     {
         $this->data = $data;
         $this->parameters = $parameters;
@@ -25,7 +25,8 @@ class Report
      */
     public function generateReport(): array
     {
-        $this->data = json_encode($this->data, JSON_UNESCAPED_UNICODE);
+        $this->data = json_encode($this->data, JSON_UNESCAPED_UNICODE | JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS);
+
         $this->jarPath = __DIR__.$this->jarPath;
         $this->parameters = $this->toString($this->parameters);
 

@@ -15,7 +15,8 @@ class Test extends TestCase
     {
         $report = new Report(
             [
-                'Test' => 'test'
+                'Test' => 'test',
+                "reverse" => "<p>asdfasdfasdfas</p><p></p><p>asd</p><p>f</p><p>as</p><p>dfas</p><p>df</p><p>asdfasdfasdf</p><p>asdfasdf</p><p>asd</p><p>fas</p><p>df</p><p>asdf</p><p>asdfa</p>"
             ],
             '',
             __DIR__.'/files/Example.jasper',
