@@ -11,7 +11,7 @@ class Report
     public $jasperPath;
     public $documentType;
 
-    public function __construct($data, $parameters, $jasperPath, $documentType = 'PDF', $output)
+    public function __construct($data, $parameters, $jasperPath, $documentType, $output)
     {
         $this->data = $data;
         $this->parameters = $parameters;
