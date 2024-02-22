@@ -14,14 +14,11 @@ class Test extends TestCase
     public function itCanTestSomething()
     {
         $report = new Report(
-            [
-                'Test' => 'test',
-                "reverse" => "<p>asdfasdfasdfas</p><p></p><p>asd</p><p>f</p><p>as</p><p>dfas</p><p>df</p><p>asdfasdfasdf</p><p>asdfasdf</p><p>asd</p><p>fas</p><p>df</p><p>asdf</p><p>asdfa</p>"
-            ],
+            __DIR__.'/files/test.json',
             '',
             __DIR__.'/files/Example.jasper',
-            'xls',
-            __DIR__.'/files/Example.xls'
+            __DIR__.'/files/Example.rtf',
+            'rtf'
         );
         $result = $report->generateReport();
         print_r($result['message']);
